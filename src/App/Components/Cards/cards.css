@@ -1,0 +1,56 @@
+.Container-Cards {
+  border-radius: 5px;
+  width: 50vh;
+  height: 40vh;
+}
+.Container-Cards-Photo {
+  position: relative;
+  width: 24vw;
+  height: 30vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.Container-Cards-Photo img {
+  border-radius: 16px;
+  max-width: 323px;
+  max-height: 220px;
+  object-fit: contain;
+}
+
+.Container-Cards-Text img {
+  width: 16px;
+  height: 16px;
+}
+
+.Container-Cards-Text {
+  display: flex;
+  justify-content: space-evenly;
+  color: #828282;
+  font-size: 14px;
+  font-family: "system-ui";
+}
+
+.SPhost {
+  border: 1px solid rgb(5, 5, 5);
+  border-radius: 7px;
+  padding: 1px;
+  margin: 1px;
+  color: black;
+  font-size: 12px;
+}
+
+.rating-start {
+  width: 45px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.Container-Cards-Title {
+  text-align: -webkit-center;
+  font-weight: bold;
+  color: rgb(5, 5, 5);
+  text-align: center;
+  margin-top: 2px;
+}

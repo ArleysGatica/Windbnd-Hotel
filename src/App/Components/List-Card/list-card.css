@@ -1,0 +1,33 @@
+.ListCard-Container {
+  width: 97.6vw;
+  height: 100%;
+  display: grid;
+  padding: 10px;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  grid-gap: 10px;
+  justify-items: center;
+}
+
+.Container-title {
+  display: flex;
+  justify-content: space-between;
+  margin: auto;
+  width: 87%;
+}
+
+#title {
+  font-weight: bold;
+  font-size: 24px;
+  color: #333333;
+  font-family: "Montserrat";
+}
+
+#yers {
+  color: #4f4f4f;
+  font-size: 14px;
+  line-height: 17px;
+  font-weight: 500;
+  font-family: "Montserrat";
+  margin-top: 7px;
+}
