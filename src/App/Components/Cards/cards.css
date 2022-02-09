@@ -26,10 +26,12 @@
 
 .Container-Cards-Text {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
   color: #828282;
   font-size: 14px;
   font-family: "system-ui";
+  width: 84%;
+  margin: auto;
 }
 
 .SPhost {
@@ -39,6 +41,10 @@
   margin: 1px;
   color: black;
   font-size: 12px;
+}
+
+#beds {
+  margin-right: auto;
 }
 
 .rating-start {
@@ -53,4 +59,6 @@
   color: rgb(5, 5, 5);
   text-align: center;
   margin-top: 2px;
+  float: left;
+  margin-left: 8%;
 }

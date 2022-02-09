@@ -1,13 +1,17 @@
-import React from 'react';
-import { ListCard } from '../App/Components/List-Card/list-card'; 
-import './home.css';
+import React from "react";
+import { ListCard } from "../App/Components/List-Cards/list-card";
+import { Header } from "../App/Components/Header/header";
+import "./home.css";
 
 const Home = () => {
   return (
     <>
-    <div className='Home-Container-ListCard'>
-      <ListCard />
-    </div>
+      <div className="Container-header">
+        <Header />
+      </div>
+      <div className="Home-Container-ListCard">
+        <ListCard />
+      </div>
     </>
   );
 };
