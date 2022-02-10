@@ -11,19 +11,25 @@
   align-items: center;
 }
 .modal.is-open {
+  transition-property: display, -webkit-transform;
+  transition-timing-function: ease;
+  transition-duration: 1s;
   display: flex;
+  align-items: flex-start;
 }
 .modal__container {
   position: relative;
-  height: 85vh;
-  width: 40vw;
+  height: 55vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
   background-color: white;
   overflow-y: auto;
   white-space: nowrap;
-  border-radius: 10px;
 }
 .modal-change {
   position: absolute;
-  right: 5px;
+  right: 25px;
   top: 4px;
 }

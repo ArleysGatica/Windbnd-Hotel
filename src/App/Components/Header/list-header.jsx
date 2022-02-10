@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import logo from "../../../Images/logo.png";
 import search from "../../../Images/search.png";
 import "./header.css";
@@ -19,7 +19,11 @@ export const ListHeader = props => {
     setChildren,
     setGuest,
     setLocations,
+    selected,
+    onchange,
   } = props;
+
+  console.log(selected);
 
   return (
     <>
@@ -27,12 +31,12 @@ export const ListHeader = props => {
         <div className="Container-header-Logo">
           <img src={logo} alt="logo" />
         </div>
-        <div className="Container-header-modal" onClick={OpenModal}>
-          <div className="Container-header-City">
-            <p>{city}Helsinki, Finland</p>
+        <div className="Container-header-modal">
+          <div className="Container-header-City" onClick={OpenModal}>
+            <p>{selected}</p>
           </div>
           <div className="Container-header-guest">
-            <p>{guest} add guest</p>
+            <p>add guest</p>
           </div>
           <div className="Container-header-Search">
             <img src={search} alt="" />
