@@ -16,25 +16,36 @@ export const ModalHeader = props => {
     setChildren,
     setGuest,
     setLocations,
+    ModalLocation,
+    setModalLocation,
+    ModalGuest,
+    setModalGuest,
   } = props;
+
+  const handleModalLocation = () => {
+    setModalGuest(false);
+    setModalLocation(!setModalLocation);
+  };
+
+  const handleModalGuest = () => {
+    setModalLocation(false);
+    setModalGuest(!setModalGuest);
+  };
 
   return (
     <>
       <div className="Container-modal-open">
-        <ul className="Container-modal-open-City">
+        <ul className="Container-modal-open-City" onClick={handleModalLocation}>
           <li>
-            <p>cabecera</p>
+            add location
             <ul>
               <li>
-                <p>Helsinki, Finland</p>
-              </li>
-              <li>
-                <p>Helsinki, Finland</p>
+                <p>{locations}</p>
               </li>
             </ul>
           </li>
         </ul>
-        <div className="Container-modal-open-guest">
+        <div className="Container-modal-open-guest" onClick={handleModalGuest}>
           <p>{guest} add guest</p>
         </div>
         <div className="Container-modal-open-Search">

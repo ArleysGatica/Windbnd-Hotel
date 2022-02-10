@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import logo from "../../../Images/logo.png";
 import search from "../../../Images/search.png";
 import "./header.css";
-import { ModalHeader } from "../Modal/modal-header";
+import { ModalHeader } from "./modal-header";
 import { Modal } from "../Modal/modal";
 
 export const ListHeader = props => {
@@ -19,11 +19,8 @@ export const ListHeader = props => {
     setChildren,
     setGuest,
     setLocations,
-    selected,
     onchange,
   } = props;
-
-  console.log(selected);
 
   return (
     <>
@@ -33,7 +30,7 @@ export const ListHeader = props => {
         </div>
         <div className="Container-header-modal">
           <div className="Container-header-City" onClick={OpenModal}>
-            <p>{selected}</p>
+            <p>{locations}</p>
           </div>
           <div className="Container-header-guest">
             <p>add guest</p>

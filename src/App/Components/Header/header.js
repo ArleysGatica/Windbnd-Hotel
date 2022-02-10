@@ -15,21 +15,32 @@ export const Header = () => {
   const [Children, setChildren] = useState(0);
   const [guest, setGuest] = useState(0);
   const [locations, setLocations] = useState(city[0]);
-  const [selected, setSelected] = useState(city[0]);
+  const [ModalLocation, setModalLocation] = useState(false);
+  const [ModalGuest, setModalGuest] = useState(false);
 
-  /* const Getinf = e => {
+  const handleModalLocation = () => {
+    OpenModal();
+    setModalLocation(true);
+  };
+
+  const handleModalGuest = () => {
+    OpenModal();
+    setModalLocation(false);
+  };
+
+  /*const Getinf = e => {
     getfDatos({
-      ...datos,
+      ....datos,
       [e.target.name]: e.target.value,
     });
-  }; */
+  }; 
   const onchange = e => {
     city.map(item => {
       if (item.city === e.target.value) {
-        setSelected(item.city);
+        setLocations(item.city);
       }
     });
-  };
+  };*/
 
   return (
     <ListHeader
@@ -45,7 +56,12 @@ export const Header = () => {
       setChildren={setChildren}
       setGuest={setGuest}
       setLocations={setLocations}
-      selected={selected}
+      handleModalLocation={handleModalLocation}
+      ModalLocation={ModalLocation}
+      setModalLocation={setModalLocation}
+      handleModalGuest={handleModalGuest}
+      ModalGuest={ModalGuest}
+      setModalGuest={setModalGuest}
     />
   );
 };
