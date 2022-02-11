@@ -20,6 +20,8 @@ export const ListHeader = props => {
     setGuest,
     setLocations,
     onchange,
+    location,
+    setLocation,
   } = props;
 
   return (
@@ -30,7 +32,7 @@ export const ListHeader = props => {
         </div>
         <div className="Container-header-modal">
           <div className="Container-header-City" onClick={OpenModal}>
-            <p>{locations}</p>
+            <p>{location}</p>
           </div>
           <div className="Container-header-guest">
             <p>add guest</p>
@@ -54,6 +56,8 @@ export const ListHeader = props => {
           setChildren={setChildren}
           setGuest={setGuest}
           setLocations={setLocations}
+          setLocation={setLocation}
+          location={location}
         />
       </Modal>
     </>

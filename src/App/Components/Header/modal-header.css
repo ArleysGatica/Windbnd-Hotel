@@ -15,25 +15,52 @@
   cursor: pointer;
   border: 1px solid #333;
   display: flex;
-  height: auto;
+  height: 100%;
   width: 40%;
   justify-content: center;
   border-radius: 12px;
   flex-direction: column;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  grid-gap: 10px;
 }
 
 .Container-modal-open-City li {
-  text-decoration: none;
-  list-style: none;
 }
 
 .Container-modal-open-City :active > ul {
-  float: left;
-  display: block;
-  position: absolute;
-  background: rgb(143, 26, 26);
+}
+
+.Container-modal-open-header-search {
+  background: yellowgreen;
+  align-items: center;
+  cursor: pointer;
+  display: grid;
+  width: 65%;
+  height: 100%;
   flex-direction: column;
-  filter: drop-shadow(0px 1px 6px rgba(0, 0, 0, 0.1));
+  justify-items: flex-start;
+}
+
+.Container-modal-open-header-search img {
+  height: 25px;
+  width: 25px;
+  margin-right: 60%;
+  margin-top: 20%;
+  background: hsl(0, 79%, 63%);
+  margin: 0% 86% -11% 0%;
+}
+
+.citys {
+  font-family: "Mulish", sans-serif;
+  font-size: 1.5em;
+  font-weight: bold;
+  color: rgb(100, 98, 98);
+  background: #eb5757;
+  flex-direction: column;
+  justify-items: flex-start;
+  display: grid;
+  align-items: center;
 }
 
 .Container-modal-open-guest {

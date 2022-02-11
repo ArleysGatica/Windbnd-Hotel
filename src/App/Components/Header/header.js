@@ -1,6 +1,8 @@
-import { React, useState } from "react";
+import { React, useState, useContext } from "react";
 import { useModal } from "../Hook/hook";
 import { ListHeader } from "./list-header";
+import ContextProvider from "../../Context/contexthotel";
+import Searchmodal from "../../../Images/Search-modal.png";
 
 export const Header = () => {
   const city = [
@@ -14,7 +16,7 @@ export const Header = () => {
   const [adults, setAdults] = useState(0);
   const [Children, setChildren] = useState(0);
   const [guest, setGuest] = useState(0);
-  const [locations, setLocations] = useState(city[0]);
+  const [locations, setLocations] = useState(city);
   const [ModalLocation, setModalLocation] = useState(false);
   const [ModalGuest, setModalGuest] = useState(false);
 
@@ -28,19 +30,7 @@ export const Header = () => {
     setModalLocation(false);
   };
 
-  /*const Getinf = e => {
-    getfDatos({
-      ....datos,
-      [e.target.name]: e.target.value,
-    });
-  }; 
-  const onchange = e => {
-    city.map(item => {
-      if (item.city === e.target.value) {
-        setLocations(item.city);
-      }
-    });
-  };*/
+  const { location } = useContext(ContextProvider);
 
   return (
     <ListHeader
@@ -62,6 +52,8 @@ export const Header = () => {
       handleModalGuest={handleModalGuest}
       ModalGuest={ModalGuest}
       setModalGuest={setModalGuest}
+      location={location}
+      Searchmodal={Searchmodal}
     />
   );
 };

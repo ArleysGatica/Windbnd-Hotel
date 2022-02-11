@@ -1,6 +1,6 @@
 import React from "react";
-import Searchmodal from "../../../Images/Search-modal.png";
 import "./modal-header.css";
+import { ListLocation } from "./listcardlocation";
 
 export const ModalHeader = props => {
   const {
@@ -20,6 +20,9 @@ export const ModalHeader = props => {
     setModalLocation,
     ModalGuest,
     setModalGuest,
+    location,
+    setLocation,
+    handleContext
   } = props;
 
   const handleModalLocation = () => {
@@ -32,22 +35,24 @@ export const ModalHeader = props => {
     setModalGuest(!setModalGuest);
   };
 
+
   return (
     <>
       <div className="Container-modal-open">
-        <ul className="Container-modal-open-City" onClick={handleModalLocation}>
-          <li>
-            add location
-            <ul>
-              <li>
-                <p>{locations}</p>
-              </li>
-            </ul>
-          </li>
-        </ul>
+        <div className="Container-modal-open-City" >
+          <p>add</p>
+          <p>{location}</p>
+          <div className="Container-modal-open-header-search">
+            <img src={Searchmodal} alt="search" />
+            <ListLocation locations={locations} Searchmodal={Searchmodal} handleContext={handleContext} />
+          </div>
+        </div>
+
+        <div className="list"> </div>
         <div className="Container-modal-open-guest" onClick={handleModalGuest}>
           <p>{guest} add guest</p>
         </div>
+
         <div className="Container-modal-open-Search">
           <button id="Button">
             <img src={Searchmodal} alt="" />
@@ -56,5 +61,6 @@ export const ModalHeader = props => {
         </div>
       </div>
     </>
+
   );
 };
