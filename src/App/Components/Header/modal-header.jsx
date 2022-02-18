@@ -22,7 +22,9 @@ export const ModalHeader = props => {
     setModalGuest,
     location,
     setLocation,
-    handleContext
+    handleContext,
+    Searchmodal
+
   } = props;
 
   const handleModalLocation = () => {
@@ -43,7 +45,7 @@ export const ModalHeader = props => {
           <p>add</p>
           <p>{location}</p>
           <div className="Container-modal-open-header-search">
-            <img src={Searchmodal} alt="search" />
+
             <ListLocation locations={locations} Searchmodal={Searchmodal} handleContext={handleContext} />
           </div>
         </div>

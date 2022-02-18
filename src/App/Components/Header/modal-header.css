@@ -25,14 +25,7 @@
   grid-gap: 10px;
 }
 
-.Container-modal-open-City li {
-}
-
-.Container-modal-open-City :active > ul {
-}
-
 .Container-modal-open-header-search {
-  background: yellowgreen;
   align-items: center;
   cursor: pointer;
   display: grid;
@@ -56,7 +49,7 @@
   font-size: 1.5em;
   font-weight: bold;
   color: rgb(100, 98, 98);
-  background: #eb5757;
+
   flex-direction: column;
   justify-items: flex-start;
   display: grid;
